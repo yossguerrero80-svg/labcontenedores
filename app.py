@@ -6,7 +6,11 @@ app = Flask(__name__)
 def home():
     return {"host": socket.gethostname(),
             "entorno": os.getenv("APP_ENV", "sin definir"),
-            "usuario": os.getenv("USER", "desconocido")}
+            "usuario": os.getenv("USER", "desconocido"),
+            "version": "2.0",
+            "mensaje": "Aplicacion modificada"
+}
+
 
 @app.route("/guardar")
 def guardar():
